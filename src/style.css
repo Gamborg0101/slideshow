@@ -7,8 +7,16 @@
   height: 500px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 h1 {
+}
+
+#picture1 {
+  display: block;
+}
+#picture2,
+#picture3 {
+  display: none;
 }

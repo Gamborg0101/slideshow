@@ -12,17 +12,26 @@ let counter = 0;
 let pictures = [pic1, pic2, pic3];
 
 nextBtn.addEventListener("click", () => {
-  console.log(pictures[counter]);
-
-  if (counter < 3) {
-    console.log("Count: ", counter);
-    counter++;
-  }
-  if (counter >= 3) {
+  pictures[counter].style.display = "none";
+  counter++;
+  if (counter >= pictures.length) {
     counter = 0;
   }
+  console.log(pictures[counter]);
+  console.log("Count: ", counter);
+  pictures[counter].style.display = "block";
+});
 
-  prevBtn.addEventListener("click", () => {
-    console.log("perfekt");
-  });
+console.log(counter);
+prevBtn.addEventListener("click", () => {
+  pictures[counter].style.display = "none";
+  counter--;
+
+  if (counter < 0) {
+    counter = pictures.length - 1;
+  }
+  console.log(pictures[counter]);
+  console.log("Count: ", counter);
+
+  pictures[counter].style.display = "block";
 });

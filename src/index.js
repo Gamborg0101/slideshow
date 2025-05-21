@@ -34,11 +34,16 @@ function picChange() {
   if (counter >= pictures.length) {
     counter = 0;
   }
+
+  for (let n = 0; n < dots.length; n++) {
+    dots[n].style.backgroundColor = "gray";
+  }
+
   pictures[counter].style.display = "block";
   dots[counter].style.backgroundColor = "blue";
 }
 
-setInterval(picChange, 1000);
+setInterval(picChange, 3000);
 
 nextBtn.addEventListener("click", () => {
   pictures[counter].style.display = "none";
